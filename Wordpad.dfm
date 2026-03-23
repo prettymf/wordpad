@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu1
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -22,13 +23,14 @@ object Form1: TForm1
     ExplicitLeft = 248
     ExplicitTop = 152
     ExplicitWidth = 185
-    object BitBtn1: TBitBtn
+    object FontBtn: TBitBtn
       Left = 8
       Top = 10
       Width = 25
       Height = 25
       Caption = 'Aa'
       TabOrder = 0
+      OnClick = FontBtnClick
     end
     object Edit1: TEdit
       Left = 39
@@ -36,10 +38,81 @@ object Form1: TForm1
       Width = 50
       Height = 23
       TabOrder = 1
-      Text = 'Edit1'
+      Text = '12'
+      StyleName = 'Windows'
+      OnChange = Edit1Change
+      OnKeyPress = Edit1KeyPress
+    end
+    object UpDown1: TUpDown
+      Left = 88
+      Top = 10
+      Width = 17
+      Height = 25
+      TabOrder = 2
+      OnClick = UpDown1Click
+    end
+    object BoldBtn: TBitBtn
+      Left = 111
+      Top = 10
+      Width = 25
+      Height = 25
+      Caption = 'B'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BoldBtnClick
+    end
+    object ItalicBtn: TBitBtn
+      Left = 142
+      Top = 10
+      Width = 25
+      Height = 25
+      Caption = 'I'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsItalic]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = FontBtnClick
+    end
+    object UnderstrBtn: TBitBtn
+      Left = 173
+      Top = 10
+      Width = 25
+      Height = 25
+      Caption = 'U'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      TabOrder = 5
+      OnClick = FontBtnClick
+    end
+    object StrikeBtn: TBitBtn
+      Left = 204
+      Top = 10
+      Width = 25
+      Height = 25
+      Caption = 'S'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsStrikeOut]
+      ParentFont = False
+      TabOrder = 6
+      OnClick = FontBtnClick
     end
   end
-  object RichEdit1: TRichEdit
+  object TextField: TRichEdit
     Left = 0
     Top = 41
     Width = 624
@@ -51,17 +124,18 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     Lines.Strings = (
-      'RichEdit1')
+      'TextField')
     ParentFont = False
     TabOrder = 1
+    OnClick = TextFieldClick
     ExplicitLeft = 280
     ExplicitTop = 240
     ExplicitWidth = 185
     ExplicitHeight = 89
   end
   object MainMenu1: TMainMenu
-    Left = 568
-    Top = 376
+    Left = 560
+    Top = 8
     object N1: TMenuItem
       Caption = #1060#1072#1081#1083
       object N3: TMenuItem
@@ -89,5 +163,25 @@ object Form1: TForm1
         Caption = #1042#1099#1088#1077#1079#1072#1090#1100
       end
     end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 592
+    Top = 8
+  end
+  object FileSaveDialog1: TFileSaveDialog
+    FavoriteLinks = <>
+    FileTypes = <>
+    Options = []
+    Left = 528
+    Top = 8
+  end
+  object FontDialog1: TFontDialog
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Left = 496
+    Top = 8
   end
 end
