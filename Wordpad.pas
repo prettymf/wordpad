@@ -41,10 +41,10 @@ type
     N14: TMenuItem;
     N15: TMenuItem;
     N16: TMenuItem;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
-    ComboBox1: TComboBox;
+    AlLeftBtn: TBitBtn;
+    AlCenterBtn: TBitBtn;
+    AlRightBtn: TBitBtn;
+    FontPicker: TComboBox;
     procedure Edit1KeyPress(Sender: TObject; var Key: Char);
     procedure FontBtnClick(Sender: TObject);
     procedure UpDown1Click(Sender: TObject; Button: TUDBtnType);
@@ -65,6 +65,11 @@ type
     procedure N4Click(Sender: TObject);
     procedure N5Click(Sender: TObject);
     procedure N13Click(Sender: TObject);
+    procedure FontPickerChange(Sender: TObject);
+    procedure TextFieldSelectionChange(Sender: TObject);
+    procedure AlLeftBtnClick(Sender: TObject);
+    procedure AlCenterBtnClick(Sender: TObject);
+    procedure AlRightBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -87,10 +92,16 @@ begin
     TextField.SelAttributes.Assign(FontDialog1.Font);
 end;
 
+procedure TForm1.FontPickerChange(Sender: TObject);
+begin
+  TextField.SelAttributes.Name := FontPicker.Text;
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   TextField.SelAttributes.Size:=StrToInt(Edit1.Text);
   FontSize:=9;
+  FontPicker.Items:=Screen.Fonts;
 end;
 
 procedure TForm1.InsertDateBtnClick(Sender: TObject);
@@ -176,6 +187,11 @@ FontSize:=TextField.SelAttributes.Size;
 Edit1.Text:=Fontsize.ToString;
 end;
 
+procedure TForm1.TextFieldSelectionChange(Sender: TObject);
+begin
+   FontPicker.ItemIndex := FontPicker.Items.IndexOf(TextField.SelAttributes.Name);
+end;
+
 procedure TForm1.UnderstrBtnClick(Sender: TObject);
 begin
   if TextField.SelAttributes.Underline=False then
@@ -188,6 +204,21 @@ begin
    FontSize:=FontSize+1;
    Edit1.Text:=FontSize.ToString;
    TextField.SelAttributes.Size:=FontSize;
+end;
+
+procedure TForm1.AlCenterBtnClick(Sender: TObject);
+begin
+  TextField.Paragraph.Alignment := taCenter;
+end;
+
+procedure TForm1.AlLeftBtnClick(Sender: TObject);
+begin
+  TextField.Paragraph.Alignment := taLeftJustify;
+end;
+
+procedure TForm1.AlRightBtnClick(Sender: TObject);
+begin
+  TextField.Paragraph.Alignment := taRightJustify;
 end;
 
 procedure TForm1.BoldBtnClick(Sender: TObject);

@@ -141,7 +141,7 @@ object Form1: TForm1
       TabOrder = 8
       OnClick = InsertDateBtnClick
     end
-    object BitBtn1: TBitBtn
+    object AlLeftBtn: TBitBtn
       Left = 449
       Top = 10
       Width = 25
@@ -154,9 +154,9 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 9
-      OnClick = InsertTimeBtnClick
+      OnClick = AlLeftBtnClick
     end
-    object BitBtn2: TBitBtn
+    object AlCenterBtn: TBitBtn
       Left = 480
       Top = 10
       Width = 25
@@ -169,9 +169,9 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 10
-      OnClick = InsertTimeBtnClick
+      OnClick = AlCenterBtnClick
     end
-    object BitBtn3: TBitBtn
+    object AlRightBtn: TBitBtn
       Left = 511
       Top = 10
       Width = 25
@@ -184,15 +184,15 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 11
-      OnClick = InsertTimeBtnClick
+      OnClick = AlRightBtnClick
     end
-    object ComboBox1: TComboBox
+    object FontPicker: TComboBox
       Left = 250
       Top = 12
       Width = 145
       Height = 23
       TabOrder = 12
-      Text = 'ComboBox1'
+      OnChange = FontPickerChange
     end
   end
   object TextField: TRichEdit
@@ -215,6 +215,7 @@ object Form1: TForm1
     WantTabs = True
     WordWrap = False
     OnClick = TextFieldClick
+    OnSelectionChange = TextFieldSelectionChange
     ExplicitWidth = 624
   end
   object MainMenu1: TMainMenu
@@ -275,12 +276,15 @@ object Form1: TForm1
       end
       object N14: TMenuItem
         Caption = #1042#1099#1088#1072#1074#1085#1080#1074#1072#1085#1080#1077' '#1087#1086' '#1083#1077#1074#1086#1084#1091' '#1082#1088#1072#1102
+        OnClick = AlLeftBtnClick
       end
       object N15: TMenuItem
         Caption = #1042#1099#1088#1072#1074#1085#1080#1074#1072#1085#1080#1077' '#1087#1086' '#1094#1077#1085#1090#1088#1091
+        OnClick = AlCenterBtnClick
       end
       object N16: TMenuItem
         Caption = #1042#1099#1088#1072#1074#1085#1080#1074#1072#1085#1080#1077' '#1087#1086' '#1087#1088#1072#1074#1086#1084#1091' '#1082#1088#1072#1102
+        OnClick = AlRightBtnClick
       end
     end
   end
