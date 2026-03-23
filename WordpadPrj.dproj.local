@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
   <Transactions>
-    <Transaction>2026.03.23 16:44:07.805,=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026.03.23 16:44:31.753,D:\workspace\Wordpad.pas=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026.03.23 16:44:31.753,D:\workspace\Wordpad.dfm=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2026.03.23 16:53:35.824,D:\workspace\WordpadPrj.dproj=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2026.03.23 17:05:34.223,=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026.03.23 17:06:13.818,C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Wordpad.pas=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026.03.23 17:06:13.818,C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Wordpad.dfm=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2026.03.23 17:06:19.562,C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\WordpadPrj.dproj=C:\Users\minec.DESKTOP-PF2E23H\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
